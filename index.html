@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Wordle</title>
+        <link rel="stylesheet" href="./src/style.css">
+    </head>
+    <body>
+        <h1 style="font-size: 3rem; letter-spacing: 3px;">
+            <span class = "text">W</span>
+            <span class = "text">O</span>
+            <span class = "text">R</span>
+            <span class = "text">D</span>
+            <span class = "text">L</span>
+            <span class = "text">E</span>
+        </h1>
+        <div id="game"></div>
+        <div id="keyboard">
+            <div class = "row1">
+                <button data-letter="q">Q</button>
+                <button data-letter="w">W</button>
+                <button data-letter="e">E</button>
+                <button data-letter="r">R</button>
+                <button data-letter="t">T</button>
+                <button data-letter="y">Y</button>
+                <button data-letter="u">U</button>
+                <button data-letter="i">I</button>
+                <button data-letter="o">O</button>
+                <button data-letter="p">P</button>
+            </div>
+            <div class = "row2">
+                <button data-letter="a">A</button>
+                <button data-letter="s">S</button>
+                <button data-letter="d">D</button>
+                <button data-letter="f">F</button>
+                <button data-letter="g">G</button>
+                <button data-letter="h">H</button>
+                <button data-letter="j">J</button>
+                <button data-letter="k">K</button>
+                <button data-letter="l">L</button>
+            </div>
+            <div class = "row3">
+                <button id="enter" class ="enter">Enter</button>
+                <button data-letter="z">Z</button>
+                <button data-letter="x">X</button>
+                <button data-letter="c">C</button>
+                <button data-letter="v">V</button>
+                <button data-letter="b">B</button>
+                <button data-letter="n">N</button>
+                <button data-letter="m">M</button>
+                <!--unicode.org-->
+                <button id="backspace" class="backspace">&#x21E6</button>
+                <style>
+                    #backspace {
+                    display: flex;
+                    align-items: center;
+                    font-size: 40px; 
+                    }
+                </style>
+            </div>
+        </div>
+        <div id="popupBox" class="popupBox">
+            <h2>HOW TO PLAY</h2>
+                <h3>Guess the Wordle in 6 tries</h3>
+                <p>-Each guess must be a valid 5-letter word.</p>
+                <p>-The color of the tiles will change to show how close your guess was to the word. </p>
+                <button id = "play" class = "play" onclick="closePopup()">PLAY</button>
+            </div>
+        </div>
+        <script src="./src/index.js" type="module"></script>
+    </body>
+</html>
